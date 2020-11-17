@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"kamalashreen/network-latency/cmd"
+	"github.com/kamalashreen/network-latency/cmd"
 	"os"
 	"path/filepath"
 )
