@@ -29,7 +29,7 @@ $ cd <path-to-network-latency>
 ## Usage
 - Build the project
 ```
-$ go build -o network-latency
+$ go build -o out/network-latency
 ```
 - Run the binary by passing corresponding protocol name to get the byte size for given data.
 1. For HTTP

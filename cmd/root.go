@@ -21,5 +21,13 @@ func Execute(versionInfo string) {
 		},
 	})
 
+	rootCmd.AddCommand(&cobra.Command{
+		Use:   "grpc",
+		Short: "Display number of bytes of Protocol buffer using gRPC protocol",
+		Run: func(_ *cobra.Command, args []string) {
+			protocol.GRPC()
+		},
+	})
+
 	_ = rootCmd.Execute()
 }

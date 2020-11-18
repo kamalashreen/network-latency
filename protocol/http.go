@@ -7,5 +7,5 @@ const XMLDocument = "<person><name>John Doe</name><email>jdoe@example.com</email
 func HTTP() {
 	documentByteString := []byte(XMLDocument)
 
-	fmt.Printf("Given data: %s\nThis corresponds to %d bytes on the network\n", documentByteString, len(documentByteString))
+	fmt.Printf("Data: \n%s\nBytes on the network: %d\n", documentByteString, len(documentByteString))
 }
