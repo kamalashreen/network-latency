@@ -1,4 +1,4 @@
-module network-latency
+module github.com/kamalashreen/network-latency
 
 go 1.14
 

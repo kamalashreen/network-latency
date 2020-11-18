@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/kamalashreen/network-latency/protocol"
 	"github.com/spf13/cobra"
 )
 
@@ -13,10 +14,10 @@ func Execute(versionInfo string) {
 	rootCmd.Version = versionInfo
 
 	rootCmd.AddCommand(&cobra.Command{
-		Use:     "xml",
-		Short:   "Display number of bytes with XML",
+		Use:   "http",
+		Short: "Display number of bytes of XML document using HTTP protocol",
 		Run: func(_ *cobra.Command, args []string) {
-
+			protocol.HTTP()
 		},
 	})
 
