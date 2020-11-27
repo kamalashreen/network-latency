@@ -10,14 +10,23 @@ var rootCmd = &cobra.Command{
 	Short: "network-latency demonstrates the number of bytes incurred by data sent using HTTP 1.1, HTTP 2 and gRPC protocols",
 }
 
+// Execute defines root commands for different network protocols
 func Execute(versionInfo string) {
 	rootCmd.Version = versionInfo
 
 	rootCmd.AddCommand(&cobra.Command{
 		Use:   "http",
-		Short: "Display number of bytes of XML document using HTTP protocol",
+		Short: "Display number of bytes of XML document using HTTP 1.1 protocol",
 		Run: func(_ *cobra.Command, args []string) {
 			protocol.HTTP()
+		},
+	})
+
+	rootCmd.AddCommand(&cobra.Command{
+		Use:   "http2",
+		Short: "Display number of bytes of XML document using HTTP 2 protocol with binary encoding",
+		Run: func(_ *cobra.Command, args []string) {
+			protocol.HTTP2()
 		},
 	})
 
